@@ -38,15 +38,7 @@ export class LoginComponent implements OnInit {
   };
 
   login():void {
-    let parentThis = this;
-    this.apiService.login(this.randomCode, this.user).then(function (response) {
-      if (response.c === 's') {
-        localStorage.setItem('userInfo', JSON.stringify(response.userAdminVO));
-        parentThis.router.navigate(['/main']);
-      } else {
-        parentThis.codeRefresh();
-      }
-    });
+    this.router.navigate(['/main']);
   };
 
 

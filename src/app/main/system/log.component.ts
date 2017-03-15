@@ -48,10 +48,6 @@ export class LogComponent implements OnInit {
 
 
 
-  getlogList() {
-    this.apiService.logList(this.search).then(result => {this.logList = result.pageList; this.config.totalItems = result.total})
-  }
-
 
   ngOnInit() {
 
@@ -63,7 +59,6 @@ export class LogComponent implements OnInit {
       this.config.itemsPerPage = this.params.pageSize||10;
       this.options.startDate = this.params.startTime;
       this.options.endDate = this.params.endTime;
-      this.getlogList();
     });
 
 

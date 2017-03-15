@@ -13,7 +13,7 @@
                 class="text">您好 张志</span><b class="caret"></b></a>
             <ul class="dropdown-menu" [ngStyle]="{'display': profileIsShow?'block':'none'}">
                 <li><a href="#"><i class="icon-user"></i> 修改密码</a></li>
-                <li><a href="#"><i class="icon-check"></i> 退出</a></li>
+                <li><a href="#" [routerLink]="['/']"><i class="icon-check"></i> 退出</a></li>
             </ul>
         </li>
     </ul>
