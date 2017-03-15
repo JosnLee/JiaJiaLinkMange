@@ -1,0 +1,28 @@
+<div style="position: absolute;left: 45%;top: 20%;z-index: 100;background-color: #FFFFFF;border: 1px solid #000;" id="box">
+    <div class="modal-header">
+        <button type="button" class="close" (click)="cancel()"><span>&times;</span></button>
+        <span class="modal-title">截取图片</span>
+    </div>
+    <div class="modal-body" >
+        <!--(ondrop)="drop(event)" (ondragover)="allowDrop(event)"(ondragstart)="drag(event)"-->
+        <div class="cropArea" style="text-align: center;position: relative">
+            <div>
+                <canvas id="can" width="600" height="600" draggable="true" ></canvas>
+                <div id="ctrlX" style="width: 100px;height: 100px;border: 1px solid #000000;position: absolute;top: 50px;left: 50px;cursor: move"></div>
+                <p id="topLeft" style="border: 5px solid #000000;position: absolute;top: 45px;left:45px;cursor: nw-resize"></p>
+                <p id="topRight" style="border: 5px solid #000000;position: absolute;top: 45px;left:145px;cursor: ne-resize"></p>
+                <p id="bottomLeft" style="border: 5px solid #000000;position: absolute;top: 145px;left:45px;cursor: sw-resize"></p>
+                <p id="bottomRight" style="border: 5px solid #000000;position: absolute;top: 145px;left:145px;cursor: se-resize"></p>
+                <canvas id="canAfter" style="display: none"></canvas>
+            </div>
+            <!--<div style="width: 30%;display: inline-block">
+                <img [src]="myImage" style="width: 100%" id="image">
+            </div>-->
+
+        </div>
+    </div>
+    <div class="modal-footer" style="border-top: 1px solid #e5e5e5;text-align: center">
+        <button class="btn btn-primary" type="button" (click)="ok()">确定</button>
+        <button class="btn ims-btn" type="button" (click)="cancel()">取消</button>
+    </div>
+</div>

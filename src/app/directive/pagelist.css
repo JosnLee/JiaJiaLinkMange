@@ -1,0 +1,81 @@
+/* s-pagination 插件样式**/
+.page-list .pagination {
+    float:right;
+}
+.page-list .pagination span {
+    cursor: pointer;
+}
+.page-list .pagination .separate span{
+    cursor: default;
+    border-top:none;
+    border-bottom:none;
+}
+.page-list .pagination .separate span:hover {
+    background: none;
+}
+.page-list .page-total {
+    float:right;
+    margin: 25px 20px;
+}
+.page-list .page-total input, .page-list .page-total select{
+    height: 26px;
+    border: 1px solid #ddd;
+}
+.pagination>li>a, .pagination>li>span{
+    margin-left: 10px!important;
+    padding: 6px 8px!important;
+}
+
+.page-list .page-total input {
+    width: 40px!important;
+    padding-left:13px;
+}
+.page-list .page-total select {
+    width: 50px;
+}
+
+.modal .pagination {
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+.modal .page-list .page-total {
+    margin: 25px 0 5px 0;
+}
+.chk_1 {
+    display: none!important;
+}
+
+.chk_1 + label {
+    background-color: transparent;
+    border: 1px solid #738bf1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 7px;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    top: 4px;
+    margin-right: 9px;
+}
+
+.chk_1 + label:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chk_1:checked + label {
+    background-color: transparent;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #243441;
+}
+
+.chk_1:checked + label:after {
+    content: '\2714';
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    color: #dc5457;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    vertical-align: text-top;
+}

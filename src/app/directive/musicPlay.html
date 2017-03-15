@@ -1,0 +1,21 @@
+<div class="music-box">
+    <audio [src]="" id="music"></audio>
+    <div>
+        <div class="progress" (click)="playChange()">
+            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+            </div>
+            <div class="progressSpot"></div>
+        </div>
+        <p class="musicTime">00:00:00/{{musicTime}}</p>
+    </div>
+    <div class="volume-box">
+        <span class="glyphicon volumeImg" (click)="mute()" [ngClass]="{'glyphicon-volume-down':!isMute,'glyphicon-volume-off':isMute}"></span>
+        <div class="volumeDown" (click)="volumeChange()">
+            <div class="volumeUp"></div>
+            <div class="volumeSpot"></div>
+        </div>
+    </div>
+    <span class="glyphicon glyphicon-backward" (click)="musicBackward()"></span>
+    <span class="glyphicon musicPlay glyphicon-play" (click)="musicPlay()"></span>
+    <span class="glyphicon glyphicon-forward" (click)="musicForward()"></span>
+</div>

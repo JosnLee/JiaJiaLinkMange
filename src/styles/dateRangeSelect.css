@@ -1,0 +1,47 @@
+.daterangepicker .range_inputs{
+    width: 480px !important;
+    margin-top: 30px;
+}
+.daterangepicker .ranges input {
+    height: 28px;
+}
+.daterangepicker .range_inputs .input-mini {
+    height: 28px;
+    width: 100px;
+}
+.ims-range-time input{
+    width: 200px;
+    cursor: pointer;
+}
+.daterangepicker .btn.btn-success{
+    background-color: #ed5b5e;
+    border: 0px;
+}
+.daterangepicker .btn.btn-success:hover{
+    background-color: #dc5457;
+}
+
+.ims-range-time {
+    height: 30px;
+}
+
+.daterangepicker .btn {
+    color: white ;
+    background-color: #dedde2;
+    padding: 3px 10px;
+}
+.daterangepicker .btn:hover {
+    background-color: #eaebec ;
+    color: white;
+}
+.ims-range-time {
+    width: 210px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.ims-range-time input:first-child {
+    border: none!important;
+    height: 28px !important;
+    margin-left: 0px !important;
+}

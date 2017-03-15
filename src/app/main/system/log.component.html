@@ -1,0 +1,61 @@
+<div class="album log content-margin">
+
+    <div class="head_title">
+      <span class="tit-color">系统日志</span>
+    </div>
+    <div class="searchWapper">
+      <!--<input type="text" name="daterangeInput" daterangepicker  (selected)="selectedDate($event)" readonly/>-->
+      <date-range-select [option]="options"></date-range-select>
+
+    </div>
+    <div style="clear: both"></div>
+    <div style="margin:15px  0px">
+      <table class="table table-bordered table-hover table-page">
+
+        <thead>
+        <tr>
+          <th>序号</th>
+          <th>操作人</th>
+          <th>对象类型</th>
+          <th>对象_ID</th>
+          <th>对象名称</th>
+          <th>操作</th>
+          <th>操作时间</th>
+          <th>备注</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let log of logList">
+          <td>
+            {{log.id}}
+          </td>
+          <td>
+            {{log.userName}}
+          </td>
+          <td>
+            {{log.category}}
+          </td>
+          <td >
+            {{log.categoryId?log.categoryId:""}}
+          </td>
+          <td>
+            {{log.entityName}}
+          </td>
+          <td>
+            {{log.content}}
+          </td>
+          <td>
+            {{log.time}}
+          </td>
+          <td title={{log.title}}>
+            {{log.notes}}
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <pagination [conf]="config"></pagination>
+    </div>
+
+
+</div>
+

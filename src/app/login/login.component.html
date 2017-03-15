@@ -1,0 +1,64 @@
+<div class="home-page">
+  <div class="content">
+    <div class="page-head">
+      <div class="page-left">
+
+        <form autocomplete="off" class="page-login">
+          <p style="margin-left: -100px">后台登录</p>
+          <div class="user">
+            <div class="login_div">
+              <i class="iconfont icon-CP icon-page"></i>
+              <input type="text" id="userid" [(ngModel)]="user.userName" name="userid" placeholder="请输入用户名" value="">
+              <span class="clear" id="clear1" (click)="user.userName=''"></span>
+            </div>
+
+            <div class="login_div">
+              <i class="iconfont icon-xiugaimima icon-page"></i>
+              <input type="password" id="pwd" [(ngModel)]="user.password" name="pwd" placeholder="请输入密码" value="">
+              <span class="clear" id="clear2" (click)="user.password=''"></span>
+
+            </div>
+            <!--<div class="remember_verification login_div">-->
+              <!--<span style="font-size: 15px">验证码：</span>-->
+              <!--<input type="text" [(ngModel)]="user.validateCode" class="verification" placeholder="" value="" name="code"-->
+                     <!--(keyup.enter)="login()">-->
+
+              <!--<a (click)="codeRefresh()" class="codeRefrsh">刷新</a>-->
+              <!--<img src="{{code}}" class="code-pic">-->
+            <!--</div>-->
+
+          </div>
+          <div class="remember_password" style="padding: 6px 10px">
+            <button id="btn_Login" type="button" (click)="login()">登 录</button>
+
+          </div>
+
+
+        </form>
+      </div>
+      <div class="page-right">
+        <div class="page-logo">
+          <div class="page-logoT">
+
+          </div>
+          <div class="page-logoB">
+            家家智能后端管理系统
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="foot">
+
+    <div class="container" style="text-align: center">
+      <ul class="foot_txt">
+        <li><a>关于我们</a></li>
+        <li><a>法律声明</a></li>
+        <li><a>友情链接</a></li>
+        <li><a> 家家智能(北京)有限公司 版权所有</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>

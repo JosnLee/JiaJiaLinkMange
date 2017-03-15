@@ -1,0 +1,170 @@
+
+.panel-style .panel-row{
+    margin-top: -3px;
+}
+.panel-style .btn-bearch button{
+    border-left: 0;
+}
+.a{
+    boder:1px
+}
+
+.search-operation a{
+    width: 20px;
+}
+.search-operation a:nth-child(2){
+    margin-right: 20px;
+}
+.panel-style {
+    background-color:#bdc2ca!important;
+    border-bottom: 1px solid #b8bdc6!important;
+    color: #D2D5DA;
+}
+.panel-heading {
+    padding: 10px 15px 13px 15px!important;
+}
+.condition{margin-left: 20px;}
+
+.on,.on:hover{
+    color: #ED5B5E!important;
+}
+/*  表格THEAD样式，表格内容居中*/
+.table-page{
+    background: #fff;
+    border: 0px!important;
+}
+.table-page thead th{
+    background-color: #f9f9f9;
+    color: #000;
+
+}
+.table-bordered th{
+    background-color: #f9f9f9!important;
+    border-left: 0!important;
+    border-right: 0!important;
+    border-bottom: 1px solid #dadde2!important;
+    font-weight: lighter;
+}
+.table-bordered tr:hover{
+    background-color: #fff;
+}
+.table-bordered tr:nth-of-type(even){
+    background-color: #fff;
+}
+.table-bordered td{
+    height: 50px;
+    line-height: 50px;
+    color: #555;
+    border: 0!important;
+
+}
+.table-bordered th, .table-bordered td {
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle !important;
+    max-width:150px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.table-bordered .small p{
+    font-size: 85%;
+    color: #A0A0A0;
+    line-height: 1.1;
+}
+.table-responsive{margin-top: -8px}
+
+
+.table-bordered .list-blue{
+    color: #A0AEF5;
+}
+/* 头部搜索样式*/
+p{padding: 0;margin: 0}
+.searchWapper{
+    background: #fff;
+    margin-top: 15px;
+    padding: 20px 0 10px 0;
+}
+.searchWapper .searchLump{
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.searchWapper .searchTitle{
+    float: left;
+    width: 82px;
+    text-align: right;
+    line-height: 35px;
+    color: #000;
+}
+
+.searchWapper .searchLump .btn-xs {
+    line-height: 25px;
+    height: 27px;
+    margin-top: 6px;
+}
+.searchWapper .close{
+    padding-left: 10px;
+    color: #ED5B5E;
+    font-size: 19px;
+    line-height: 24px;
+}
+ol{
+    position: relative;
+}
+ol:before{
+    content: "|";
+    color: #ED5B5E;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    left: 6px;
+    bottom: 8px;
+}
+.time-out{
+    margin-right: 10px;
+}
+.panel-footer{
+    border: 0!important;
+}
+.export_excel{
+    float: right;
+}
+.no-items{
+    text-align: center;
+}
+.paging{
+    background-color:#E2DEDF!important; ;
+    margin-bottom: 50px;
+    padding-top: 0;
+}
+.page-total,.pagination{
+    margin-top: -10px!important;
+}
+.page-total input,.page-total select{
+    margin: 0 2px;
+}
+
+.btn-search{
+    position: absolute;
+    top: 11px;
+    right: 16px;
+    z-index: 100;
+    cursor: pointer;
+}
+.input-search{
+    width: 228px!important;
+    border-radius: 100px!important;
+    position: relative;
+}
+.table-search{
+    padding:10px 20px;
+    background-color: #f8f8f8;
+}
+.table-search label {
+    display: inline-block;
+}
+.th-color th{
+    background-color: #fff!important;
+    color: #000;
+
+}

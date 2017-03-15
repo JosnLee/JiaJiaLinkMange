@@ -1,0 +1,55 @@
+<!--Header-part-->
+<div id="header">
+    <h1><a href="dashboard.html"></a></h1>
+</div>
+<!--close-Header-part-->
+
+
+<!--top-Header-menu-->
+<div id="user-nav" class=" navbar-inverse">
+    <ul class="nav">
+        <li class="dropdown" id="profile-messages" (click)="profileIsShow=!profileIsShow"><a title="" data-toggle="dropdown" data-target="#profile-messages"
+                                                      class="dropdown-toggle"><i class="icon icon-user"></i> <span
+                class="text">您好 张志</span><b class="caret"></b></a>
+            <ul class="dropdown-menu" [ngStyle]="{'display': profileIsShow?'block':'none'}">
+                <li><a href="#"><i class="icon-user"></i> 修改密码</a></li>
+                <li><a href="#"><i class="icon-check"></i> 退出</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--close-top-Header-menu-->
+<!--start-top-serch-->
+<!--close-top-serch-->
+<!--sidebar-menu-->
+<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i></a>
+    <ul>
+        <li *ngFor="let menu of menus" (click)="menuClick(menu)"><a ><i class="{{menu.icon}}"></i> <span>{{menu.title}}</span>
+        <span *ngIf="menu.items.length"
+                class="label label-important">{{menu.items.length}}</span>
+        </a>
+            <ul [ngStyle]="{'display': menu.subShow?'block':'none'}" >
+                <li><a href="index2.html" *ngFor="let subMenu of menu.items">{{subMenu.title}}</a></li>
+            </ul>
+
+        </li>
+    </ul>
+</div>
+<!--sidebar-menu-->
+
+<!--main-container-part-->
+<div id="content" [ngStyle]="{'minHeight':contentHeight}">
+
+    <!--End-breadcrumbs-->
+    <router-outlet></router-outlet>
+</div>
+
+<!--end-main-container-part-->
+
+<!--Footer-part-->
+
+<div class="row-fluid">
+    <div id="footer" class="span12"> 2013 &copy; Matrix Admin. Brought to you by <a href="http://themedesigner.in/">Themedesigner.in</a>
+    </div>
+</div>
+

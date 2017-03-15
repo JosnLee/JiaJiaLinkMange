@@ -1,0 +1,24 @@
+{
+  "name": "daterangepicker",
+  "version": "0.0.3",
+  "description": "Date range picker component",
+  "main": "daterangepicker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dangrossman/bootstrap-daterangepicker"
+  },
+  "keywords": [
+    "daterangepicker"
+  ],
+  "author": " Copyright 2012-2014 Dan Grossman, publish for Bruno Sato <bruno.sato@live.com> (http://brunosato.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dangrossman/bootstrap-daterangepicker/issues"
+  },
+  "homepage": "https://github.com/dangrossman/bootstrap-daterangepicker",
+  "_from": "daterangepicker@0.0.3",
+  "_resolved": "http://registry.npm.taobao.org/daterangepicker/download/daterangepicker-0.0.3.tgz"
+}

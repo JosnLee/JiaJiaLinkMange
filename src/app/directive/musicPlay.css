@@ -1,0 +1,123 @@
+@keyframes rotate
+{
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+.music-box{
+    display: inline-block;
+    width: 450px;
+}
+@-moz-keyframes rotate
+{
+    0%   {-moz-transform: rotate(0deg);}
+    100% {-moz-transform: rotate(360deg);}
+}
+.music-box{
+    display: inline-block;
+    width: 450px;
+    height: 110px;
+    /*border: 1px solid #000000;*/
+    padding: 10px;
+    background: url("../img/music.png") no-repeat;
+    background-size:  contain;
+    position: relative;
+}
+.music-box .progress{
+    width: 261px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    overflow: visible;
+    box-shadow: none;
+}
+.music-box .progress-bar{
+    width: 0;
+    height: 6px;
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    top: 9px;
+    /*background: #03a9f4;*/
+}
+.progressSpot{
+    display: inline-block;
+    width: 16px;
+    height: 24px;
+    position: absolute;
+    top: 2px;
+    left: -3px;
+    background: url("../img/btn.png");
+    background-size: contain;
+}
+.music-box .musicTime{
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    right: 50px;
+}
+.music-box .music-btn{
+    text-align: center;
+}
+.music-box .volume-box{
+    display: inline-block;
+    position: absolute;
+    top: 49px;
+    left: 30px;
+}
+.music-box .volume-box span{
+    font-size: 20px;
+    color: #666;
+}
+.music-box>span{
+    position: absolute;
+    top: 53px;
+    color: #666;
+    cursor: pointer;
+    font-size: 16px;
+}
+.music-box .glyphicon-backward{
+    left: 265px;
+}
+.music-box .musicPlay{
+    left: 325px;
+}
+.music-box .glyphicon-forward{
+    left: 385px;
+}
+.volumeDown,.volumeUp{
+    display: inline-block;
+    width: 87px;
+    height: 4px;
+    border: 1px solid #ddd;
+    background-color:#eee ;
+}
+.volumeDown{
+    position: relative;
+    background: transparent;
+    top: -5px;
+    border-radius: 2px;
+}
+.volumeUp{
+    position: absolute;
+    left: 0;
+    top: -2px;
+    border-radius: 2px 0 0 2px;
+    border-color: #03a9f4;
+    background-color: #03a9f4;
+}
+.volumeSpot{
+    display: inline-block;
+    width: 16px;
+    height: 24px;
+    position: absolute;
+    top: -10px;
+    left: 75px;
+    background: url("../img/btn.png");
+    background-size: contain;
+}

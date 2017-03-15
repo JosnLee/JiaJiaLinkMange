@@ -1,0 +1,9 @@
+/* this file will be extracted to main dist folder and is imported in index.html */
+/* This file is for setting global styles  */
+@import 'variables';
+@import "main.component.css";
+@import "table.css";
+@import "dateRangeSelect.css";
+@import "matrix-media.css";
+@import "matrix-style.css";
+

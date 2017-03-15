@@ -1,0 +1,48 @@
+.modify {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+}
+.modify .mid-center{
+    margin: 0 auto;
+    width: 500px;
+    display: block;
+    padding-top: 50px;
+}
+.modify .mid-center .e-accounts{
+    font-size: 16px;
+    margin-left: 30px;
+    font-weight: 100;
+    position: relative;
+    top: 3px;
+    vertical-align: top;
+    width: 100px;
+    text-align: right;
+}
+.modify .agreement{
+    display: inline-block;
+    margin-left: 10px;
+}
+.modify .agreement span input{
+    margin-right: 5px;
+}
+.modify .agreement .e-agreement{
+    display: block;
+}
+.modify .agreement .btn{
+    margin-top: 50px;
+    margin-left: 78px;
+}
+ .modify .mid-center .register .e-input{
+     width: 300px;
+     height: 30px;
+     line-height: 30px;
+     padding-left: 5px;
+ }
+ .pbj-search{
+     margin-left: -6px;
+     display: inline !important;
+     position: relative;
+     top: -6px;
+     left: 15px;
+ }
