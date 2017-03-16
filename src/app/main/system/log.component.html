@@ -1,61 +1,62 @@
-<div class="album log content-margin">
-
-    <div class="head_title">
-      <span class="tit-color">系统日志</span>
+<div class="container-fluid">
+  <h4>日志管理</h4>
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="widget-box">
+        <div class="widget-title"> <span class="icon"> <i class="fa fa-th-list"></i> </span>
+          <input type="button" class="btn btn-primary" value="删除" (click)="delete()">
+        </div>
+        <div class="widget-content nopadding">
+          <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+              <th>Rendering engine</th>
+              <th>Browser</th>
+              <th>Platform(s)</th>
+              <th>Engine version</th>
+              <th>CSS grade</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="odd gradeX">
+              <td>Trident</td>
+              <td>Internet
+                Explorer 4.0</td>
+              <td>Win 95+</td>
+              <td class="center"> 4</td>
+              <td class="center">X</td>
+            </tr>
+            <tr class="even gradeC">
+              <td>Trident</td>
+              <td>Internet
+                Explorer 5.0</td>
+              <td>Win 95+</td>
+              <td class="center">5</td>
+              <td class="center">C</td>
+            </tr>
+            <tr class="odd gradeA">
+              <td>Trident</td>
+              <td>Internet
+                Explorer 5.5</td>
+              <td>Win 95+</td>
+              <td class="center">5.5</td>
+              <td class="center">A</td>
+            </tr>
+            <tr class="even gradeA">
+              <td>Trident</td>
+              <td>Internet
+                Explorer 6</td>
+              <td>Win 98+</td>
+              <td class="center">6</td>
+              <td class="center">A</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-    <div class="searchWapper">
-      <!--<input type="text" name="daterangeInput" daterangepicker  (selected)="selectedDate($event)" readonly/>-->
-      <date-range-select [option]="options"></date-range-select>
+  </div>
+  <p-growl [value]="msgs"></p-growl>
 
-    </div>
-    <div style="clear: both"></div>
-    <div style="margin:15px  0px">
-      <table class="table table-bordered table-hover table-page">
-
-        <thead>
-        <tr>
-          <th>序号</th>
-          <th>操作人</th>
-          <th>对象类型</th>
-          <th>对象_ID</th>
-          <th>对象名称</th>
-          <th>操作</th>
-          <th>操作时间</th>
-          <th>备注</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let log of logList">
-          <td>
-            {{log.id}}
-          </td>
-          <td>
-            {{log.userName}}
-          </td>
-          <td>
-            {{log.category}}
-          </td>
-          <td >
-            {{log.categoryId?log.categoryId:""}}
-          </td>
-          <td>
-            {{log.entityName}}
-          </td>
-          <td>
-            {{log.content}}
-          </td>
-          <td>
-            {{log.time}}
-          </td>
-          <td title={{log.title}}>
-            {{log.notes}}
-          </td>
-        </tr>
-        </tbody>
-      </table>
-      <pagination [conf]="config"></pagination>
-    </div>
-
-
+  <p-confirmDialog width="425" accept-lable="122"></p-confirmDialog>
 </div>
-

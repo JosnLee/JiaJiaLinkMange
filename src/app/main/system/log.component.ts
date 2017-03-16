@@ -1,18 +1,19 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ApiService} from '../../shared';
+import {ConfirmationService} from 'primeng/primeng';
+
 
 let moment =require('moment')
 @Component({
   selector: 'mainApp',
   templateUrl: './log.component.html',
-  providers: [ApiService],
-
+  providers: [ConfirmationService]
 })
 export class LogComponent implements OnInit {
   logList:Array<Object> = [];
   search:any = {pageNo: 1, pageSize: 10,startTime:"",endTime:""};
   params:any = {};
+  msgs:any=[];
   config   = {
     currentPage: 1,
     itemsPerPage: 10,
@@ -33,7 +34,7 @@ export class LogComponent implements OnInit {
     }
   }
 
-  constructor(private apiService:ApiService, private activatedRoute:ActivatedRoute, private router:Router) {
+  constructor(private confirmationService:ConfirmationService, private activatedRoute:ActivatedRoute, private router:Router) {
     let parentThis = this;
     this.config.onChange = function () {
       parentThis.search={pageNo:this.currentPage,pageSize:this.itemsPerPage};
@@ -46,6 +47,17 @@ export class LogComponent implements OnInit {
     }
   }
 
+  delete(){
+    this.confirmationService.confirm({
+      message: `你确定要删除XX吗?`,
+      header: 'CP中心',
+      accept: () => {
+        this.msgs = [];
+        this.msgs.push({severity:'info', summary:'删除提示', detail:'删除成功'});
+
+      }
+    });
+  }
 
 
 
