@@ -62,7 +62,7 @@ export class LogComponent implements OnInit {
 
 
   ngOnInit() {
-
+    this.config.totalItems =100;
     this.activatedRoute.queryParams.subscribe(params => {
       this.params = params;
       this.search.pageNo = this.params.pageNo||1;
