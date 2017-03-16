@@ -5,6 +5,8 @@
       <div class="widget-box">
         <div class="widget-title"> <span class="icon"> <i class="fa fa-th-list"></i> </span>
           <input type="button" class="btn btn-primary" value="删除" (click)="delete()">
+          <date-range-select [option]="options"></date-range-select>
+
         </div>
         <div class="widget-content nopadding">
           <table class="table table-bordered table-striped">
@@ -59,6 +61,11 @@
       <pagination [conf]="config"></pagination>
 
     </div>
+  </div>
+
+
+  <div class="white-background" style="height: 540px;margin-top: 15px;padding: 20px">
+    <e-chart type="line" title="播放概况" [xAxisData]="xAxisData" [option]="logData" style="height: 500px;width: 1602px;" ></e-chart>
   </div>
   <p-growl [value]="msgs"></p-growl>
 

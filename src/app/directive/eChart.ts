@@ -1,7 +1,7 @@
 /**
  * Created by dfsj16111702 on 2017/2/23.
  */
-import {Component, Input,ElementRef,Output,EventEmitter} from '@angular/core';
+import {Component, Input, ElementRef, Output, EventEmitter} from '@angular/core';
 var eCharts = require('echarts/lib/echarts');
 var $ = require('jquery');
 require('echarts/lib/chart/line');
@@ -35,7 +35,7 @@ export class eChartComponent {
     @Input('option') options:any = {};
     @Input('type') type:any = '';
     @Input('title') title:any = '';
-    @Input('xAxisData') xAxisData:any=[];
+    @Input('xAxisData') xAxisData:any = [];
     eChart:any;
     //timer:any;
     constructor(private div:ElementRef) {
@@ -43,60 +43,64 @@ export class eChartComponent {
         //console.log($(this.div.nativeElement).find('div#eChart'));
 
     }
+
     ngAfterViewInit() {
         this.eChart = eCharts.init(this.div.nativeElement.children[0].children[0]);
-        let timer=setTimeout(data => {
+        let timer = setTimeout(data => {
             this.dataChange();
+            //noinspection TypeScriptUnresolvedFunction
             clearTimeout(timer);
-        },200);
+        }, 200);
 
     }
-    dataChange(){
-        if(this.type=='pie'){
-            let data=[];
-            let dataName=[];
+
+    dataChange() {
+        if (this.type == 'pie') {
+            let data = [];
+            let dataName = [];
             this.options.forEach(function (item) {
-                data.push({name:item.name,value:item.value});
+                data.push({name: item.name, value: item.value});
                 dataName.push(item.name);
             });
-            this.getPie(data,dataName);
-        }else if(this.type=='line'){
-            let data=[];
-            let dataName=[];
-            let type=this.type;
+            this.getPie(data, dataName);
+        } else if (this.type == 'line') {
+            let data = [];
+            let dataName = [];
+            let type = this.type;
             this.options.forEach(function (item) {
-                data.push({name:item.name,type:type,data:item.data});
+                data.push({name: item.name, type: type, data: item.data});
                 dataName.push(item.name);
             });
-            this.getLine(dataName,data);
+            this.getLine(dataName, data);
 
         }
     }
 
 
-    ngOnChanges(a){
-        let timer=setTimeout(data => {
+    ngOnChanges(a) {
+        let timer = setTimeout(data => {
             this.dataChange();
+            //noinspection TypeScriptUnresolvedVariable
             clearTimeout(timer);
-        },200);
+        }, 200);
     }
 
-    getPie(data,dataName){
-        this.eChart.setOption({
+    getPie(data, dataName) {
+        this.eChart.setOption(<echarts.Option>{
             title: {
                 text: this.title,
                 x: 'center',
-                textStyle:{
-                    fontSize:16,
-                    fontWeight:500,
-                    color:'#000',
-                    fontFamily:'Microsoft Yahei',
+                textStyle: {
+                    fontSize: 16,
+                    fontWeight: 500,
+                    color: '#000',
+                    fontFamily: 'Microsoft Yahei',
                 }
             },
             tooltip: {
                 trigger: 'item',
                 formatter: "{a} <br/>{b} : {c} ({d}%)",
-                confine:true,
+                confine: true,
             },
             legend: {
                 orient: 'vertical',
@@ -110,9 +114,9 @@ export class eChartComponent {
                     radius: '50%',
                     center: ['50%', '60%'],
                     data: data,
-                    hoverAnimation:true,
-                    animationType:'expansion',
-                    animation:true,
+                    hoverAnimation: true,
+                    animationType: 'expansion',
+                    animation: true,
                     itemStyle: {
                         emphasis: {
                             shadowBlur: 10,
@@ -120,23 +124,24 @@ export class eChartComponent {
                             shadowColor: 'rgba(0, 0, 0, 0.5)'
                         }
                     },
-                    color:['#4285f4', '#ea4335','#fbbc05']
+                    color: ['#4285f4', '#ea4335', '#fbbc05']
                 }
             ]
         });
     }
-    getLine(dataName,seriesData){
-        this.eChart.setOption({
+
+    getLine(dataName, seriesData) {
+        this.eChart.setOption(<echarts.Option>{
             title: {
                 text: this.title
             },
             tooltip: {
                 trigger: 'axis',
-                confine:true
+                confine: true
             },
             legend: {
-                data:dataName,
-                bottom:"-5"
+                data: dataName,
+                bottom: "-5"
             },
             grid: {
                 left: '5%',
@@ -148,19 +153,19 @@ export class eChartComponent {
                 type: 'category',
                 boundaryGap: false,
                 data: this.xAxisData,
-                axisLabel:{
-                    margin:-20,
-                    inside:true
+                axisLabel: {
+                    margin: -20,
+                    inside: true
                 }
             },
             yAxis: {
                 type: 'value',
-                axisLabel:{
-                    margin:-45,
-                    inside:true
+                axisLabel: {
+                    margin: -45,
+                    inside: true
                 }
             },
-            series:seriesData
+            series: seriesData
         })
     }
 
